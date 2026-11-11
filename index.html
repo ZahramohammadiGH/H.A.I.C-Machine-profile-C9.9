@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HAIC | Machine Profile</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f5;
+    color: #263445;
+}
+
+.container {
+    max-width: 720px;
+    margin: auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 10px 35px rgba(32, 48, 64, 0.12);
+}
+
+/* HEADER */
+
+.header {
+    background: #ffffff;
+    text-align: center;
+}
+
+/* COMPANY LOGO */
+
+.logo {
+    padding: 28px 20px 20px;
+}
+
+.logo img {
+    width: 155px;
+    max-height: 125px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/* COMPANY BRAND */
+
+.brand-area {
+    background: linear-gradient(135deg, #173b58, #087b80);
+    color: white;
+    padding: 22px 15px 27px;
+    border-top: 3px solid #287b83;
+}
+
+.brand {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.company-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 13px;
+    color: #ffffff;
+}
+
+.profile-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #dcebed;
+    letter-spacing: 0.3px;
+}
+
+/* MAIN CONTENT */
+
+.content {
+    background: white;
+    padding: 28px;
+}
+
+.machine-name {
+    text-align: center;
+    margin: 5px 0 32px;
+}
+
+.machine-name h1 {
+    color: #173b58;
+    font-size: 27px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.machine-name p {
+    color: #718096;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-top: 30px;
+}
+
+.section h2 {
+    font-size: 17px;
+    font-weight: 800;
+    color: #176d75;
+    border-bottom: 2px solid #e5edef;
+    padding-bottom: 11px;
+    margin-bottom: 16px;
+}
+
+/* SPECIFICATION CARDS */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.item {
+    position: relative;
+    background: linear-gradient(135deg, #f5f9fa, #eff5f6);
+    padding: 16px 17px 16px 21px;
+    border: 1px solid #e7eff0;
+    border-radius: 12px;
+    box-shadow: 0 3px 9px rgba(30, 60, 70, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ELEGANT ACCENT LINE */
+
+.item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    bottom: 14px;
+    width: 4px;
+    border-radius: 0 5px 5px 0;
+    background: linear-gradient(180deg, #087b80, #173b58);
+}
+
+.item span {
+    display: block;
+    color: #647789;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.item strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 750;
+    color: #173b58;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* MODEL NUMBER: C.9 WITH SMALL 6 BESIDE IT */
+
+.item strong .model-small {
+    display: inline !important;
+    font-size: 0.65em;
+    font-weight: 700;
+    vertical-align: baseline;
+    margin-left: 1px;
+    line-height: inherit;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    margin-top: 38px;
+    padding-top: 20px;
+    border-top: 1px solid #e5edef;
+    color: #758493;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.footer a {
+    color: #087b80;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .logo {
+        padding: 23px 15px 17px;
+    }
+
+    .logo img {
+        width: 135px;
+        max-height: 110px;
+    }
+
+    .brand-area {
+        padding: 20px 12px 24px;
+    }
+
+    .brand {
+        font-size: 29px;
+    }
+
+    .company-name {
+        font-size: 14px;
+    }
+
+    .profile-title {
+        font-size: 13px;
+    }
+
+    .content {
+        padding: 21px 17px;
+    }
+
+    .machine-name h1 {
+        font-size: 23px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item {
+        padding: 15px 17px 15px 21px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+
+        <!-- COMPANY LOGO -->
+        <div class="logo">
+            <img src="logo-haic.jpg"
+                 alt="Hazar Aluminum Industries Company Logo">
+        </div>
+
+        <!-- COMPANY BRAND -->
+        <div class="brand-area">
+
+            <div class="brand">H.A.I.C</div>
+
+            <div class="company-name">
+                Hazar Aluminum Industries Company
+            </div>
+
+            <div class="profile-title">
+                Industrial Machine Digital Profile
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="content">
+
+        <!-- MACHINE NAME -->
+        <div class="machine-name">
+
+            <h1>Automatic Cutting Machine</h1>
+
+            <p>Official Machine Identification Profile</p>
+
+        </div>
+
+        <!-- MACHINE IDENTIFICATION -->
+        <section class="section">
+
+            <h2>Machine Identification</h2>
+
+            <div class="info-grid">
+
+                <div class="item">
+                    <span>Model</span>
+                    <strong>C.9<span class="model-small">9</span></strong>
+                </div>
+
+                <div class="item">
+                    <span>Serial Number</span>
+                    <strong>0005</strong>
+                </div>
+
+                <div class="item">
+                    <span>Manufacturer</span>
+                    <strong>H.A.I.C</strong>
+                </div>
+
+                <div class="item">
+                    <span>Production Date</span>
+                    <strong>1405 / 2026</strong>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TECHNICAL SPECIFICATIONS -->
+        <section class="section">
+
+            <h2>Technical Specifications</h2>
+
+            <div class="info-grid">
+
+                <div class="item">
+                    <span>Main Motor</span>
+                    <strong>3 kW</strong>
+                </div>
+
+                <div class="item">
+                    <span>Servo Motor</span>
+                    <strong>LS - 2 kW</strong>
+                </div>
+
+                <div class="item">
+                    <span>Machine Weight</span>
+                    <strong>2500 kg</strong>
+                </div>
+
+                <div class="item">
+                    <span>Voltage</span>
+                    <strong>3PH AC 380V</strong>
+                </div>
+
+                <div class="item">
+                    <span>Frequency</span>
+                    <strong>50 Hz</strong>
+                </div>
+
+                <div class="item">
+                    <span>Rated Current</span>
+                    <strong>15 A</strong>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MANUFACTURER INFORMATION -->
+        <section class="section">
+
+            <h2>Manufacturer Information</h2>
+
+            <div class="item">
+                <span>Company</span>
+                <strong>Hazar Aluminum Industries Company</strong>
+            </div>
+
+            <div class="item" style="margin-top:13px">
+                <span>Department</span>
+                <strong>Converting & Aseptic Plants Maintenance Unit</strong>
+            </div>
+
+        </section>
+
+<div class="item" style="margin-top:13px">
+    <span>Maintenance Manager</span>
+    <strong>Mehdi Ghasemi</strong>
+</div>
+
+<div class="item" style="margin-top:13px">
+    <span>Contact Number</span>
+    <strong>+98 913 615 0038</strong>
+</div>
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+
+            <p>Designed for H.A.I.C</p>
+
+            <p>
+                <a href="https://haic.ir/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Official Website
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
